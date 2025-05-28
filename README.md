@@ -1,5 +1,6 @@
 # mongodb_TODO
 show dbs
+
 admin    40.00 KiB
 config  108.00 KiB
 local    72.00 KiB
@@ -11,6 +12,7 @@ db.moneyRecord.insertOne({})
   insertedId: ObjectId('6836cb3eef58176871db3456')
 }
 show collections
+
 moneyRecord
 db.moneyRecord.insertOne({name:"rahul"}{amount:"200"})
 SyntaxError: Unexpected token, expected "," (1:39)
@@ -39,6 +41,7 @@ db.moneyRecord.deleteOne({name:"rahul"})
   deletedCount: 1
 }
 db.moneyRecord.all({})
+
 TypeError: db.moneyRecord.all is not a function
 show collections
 moneyRecord
@@ -57,6 +60,7 @@ db.tasks.insertMany([
     '2': ObjectId('6836e3c7ef58176871db345a')
   }
 }
+
 db.tasks.find()
 {
   _id: ObjectId('6836e3c7ef58176871db3458'),
@@ -84,6 +88,7 @@ db.tasks.updateMany({status:"pending"},{$set:{status:false}})
   modifiedCount: 2,
   upsertedCount: 0
 }
+
 db.tasks.find()
 {
   _id: ObjectId('6836e3c7ef58176871db3458'),
@@ -97,6 +102,7 @@ db.tasks.find()
   status: 'completed',
   created_at: 2025-05-28T10:21:59.114Z
 }
+
 {
   _id: ObjectId('6836e3c7ef58176871db345a'),
   task: 'Study MongoDB',
@@ -111,6 +117,7 @@ db.tasks.updateMany({status:"completed"},{$set:{status:true}})
   modifiedCount: 1,
   upsertedCount: 0
 }
+
 db.tasks.find()
 {
   _id: ObjectId('6836e3c7ef58176871db3458'),
@@ -124,6 +131,7 @@ db.tasks.find()
   status: true,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
 {
   _id: ObjectId('6836e3c7ef58176871db345a'),
   task: 'Study MongoDB',
@@ -135,6 +143,8 @@ db.tasks.insertOne({task:"playing",created_at:new Date()})
   acknowledged: true,
   insertedId: ObjectId('6836ea88ef58176871db345b')
 }
+
+
 db.tasks.find()
 {
   _id: ObjectId('6836e3c7ef58176871db3458'),
@@ -142,18 +152,25 @@ db.tasks.find()
   status: false,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
 {
   _id: ObjectId('6836e3c7ef58176871db3459'),
   task: 'Clean room',
   status: true,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
+
 {
   _id: ObjectId('6836e3c7ef58176871db345a'),
   task: 'Study MongoDB',
   status: false,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
 {
   _id: ObjectId('6836ea88ef58176871db345b'),
   task: 'playing',
@@ -163,6 +180,8 @@ db.tasks.updateMany(
   { status: { $exists: false } },
   { $set: { status: false } }
 )
+
+
 {
   acknowledged: true,
   insertedId: null,
@@ -170,6 +189,8 @@ db.tasks.updateMany(
   modifiedCount: 1,
   upsertedCount: 0
 }
+
+
 db.tasks.find()
 {
   _id: ObjectId('6836e3c7ef58176871db3458'),
@@ -177,6 +198,8 @@ db.tasks.find()
   status: false,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
 {
   _id: ObjectId('6836e3c7ef58176871db3459'),
   task: 'Clean room',
@@ -189,6 +212,7 @@ db.tasks.find()
   status: false,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
 {
   _id: ObjectId('6836ea88ef58176871db345b'),
   task: 'playing',
@@ -215,18 +239,24 @@ db.tasks.find()
   status: false,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
 {
   _id: ObjectId('6836e3c7ef58176871db3459'),
   task: 'Clean room',
   status: true,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
 {
   _id: ObjectId('6836e3c7ef58176871db345a'),
   task: 'Study MongoDB',
   status: true,
   created_at: 2025-05-28T10:21:59.114Z
 }
+
+
 {
   _id: ObjectId('6836ea88ef58176871db345b'),
   task: 'playing',
@@ -242,6 +272,8 @@ db.tasks.updateMany(
     }
   }
 )
+
+
 {
   acknowledged: true,
   insertedId: null,
@@ -257,6 +289,8 @@ db.tasks.find()
   created_at: 2025-05-28T10:21:59.114Z,
   update_time: 2025-05-28T10:54:42.449Z
 }
+
+
 {
   _id: ObjectId('6836e3c7ef58176871db3459'),
   task: 'Clean room',
