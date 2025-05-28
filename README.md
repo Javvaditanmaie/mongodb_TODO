@@ -1,4 +1,4 @@
-# mongodb_TODO
+<pre># mongodb_TODO
 show dbs
 
 admin    40.00 KiB
@@ -1177,3 +1177,4 @@ db.tasks.insertOne({
 })
 toDotask
 Selection deleted
+</pre>
