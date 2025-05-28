@@ -1133,5 +1133,13 @@ db.tasks.find().sort({ fieldName: 1 })
   due_date: 2025-05-27T00:00:00.000Z,
   priority: 'medium'
 }
+db.tasks.insertOne({
+  task: "Finish writing report",
+  status: false,            // task not done yet
+  priority: "medium",       // enum: low, medium, high
+  created_at: new Date(),   // current date/time
+  updatedAt: new Date(),    // current date/time
+  due_date: new Date(Date.now() + 2 * 60 * 60 * 1000)  // due in 2 hours
+})
 toDotask
 Selection deleted
